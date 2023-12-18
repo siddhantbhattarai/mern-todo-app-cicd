@@ -31,7 +31,7 @@ docker build -t mern-todo-app-backend .
 # Run the backend app
 docker run -p 8000:8000 mern-todo-app-backend
 ```
-```
+
 OR
 ```
 # Run the container via docker compose
