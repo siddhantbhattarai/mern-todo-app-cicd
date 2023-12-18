@@ -1,4 +1,4 @@
-# Installation
+# Deployment
 Run the following command to clone the repository
 ```
 git clone https://github.com/siddhantbhattarai/mern-todo-app-cicd.git
