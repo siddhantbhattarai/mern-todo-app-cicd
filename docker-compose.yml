@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend  
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-network
+    volumes:
+      - frontend-data:/usr/src/app/frontend/node_modules
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend  
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - GMAIL_USERNAME=test123@ismt.edu.np
+      - GMAIL_PASSWORD=$$+@r#1%3
+      - PORT=8000
+      - JWT_SECRET=eyJhbGciOiJIUzUxMiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMjg2NDg1MiwiaWF0IjoxNzAyODY0ODUyfQ.EHiGcO4Qr6z5bjkckkT1kUHyBQiRGueR3CYsN47EceHf-fL21qIUPWI6qWIYgOTKsF-69lQlwtUu4WkGywrnBA
+
+    networks:
+      - mern-network
+    volumes:
+      - backend-data:/usr/src/app/backend/node_modules
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-network
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  frontend-data:
+  backend-data:
+  mongo-data:
