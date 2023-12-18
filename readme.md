@@ -43,7 +43,8 @@ OR
 docker-compose up -d
 ```
 
-
+# Access the todo app via
+```http://localhost:3000```
 
 
 
