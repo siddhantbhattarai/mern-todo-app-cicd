@@ -16,6 +16,7 @@ JWT_SECRET=a random secret key eg. thisisasecretkey
 
 # Build the frontend
 ```
+cd frontend
 docker build -t mern-todo-app-frontend .
 ```
 
@@ -26,6 +27,7 @@ docker run -p 3000:3000 mern-todo-app-frontend
 
 # Build the backend
 ```
+cd backend
 docker build -t mern-todo-app-backend .
 ```
 
