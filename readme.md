@@ -14,7 +14,7 @@ PORT=8000
 JWT_SECRET=a random secret key eg. thisisasecretkey
 ```
 
-**# Build the frontend**
+# Build the frontend
 ```
 docker build -t mern-todo-app-frontend .
 ```
