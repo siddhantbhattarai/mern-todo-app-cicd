@@ -6,7 +6,7 @@ git clone https://github.com/siddhantbhattarai/mern-todo-app-cicd.git
 ```
 # Configuration
 Create ```.env``` file inside ```backend``` directory and copy the following code
-
+```
 ```
 MONGO_URI=Your mongodb URI
 GMAIL_USERNAME=your gmail address 
